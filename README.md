@@ -11,7 +11,7 @@ This repository provides some files ready to copy and paste when creating a new 
 # Usage 2 (recommended)
 * Add this repo as a remote `git remote add phptmpl https://github.com/ndthuan/docker-php-confd-template.git`
 * Fetch `git fetch phptmpl`
-* Merge `git merge phptmpl/master --allow-unrelated-histories`
+* Merge `git merge phptmpl/master --allow-unrelated-histories` (on conflict, accept your README.md)
 * Copy content of example.Dockerfile into your Dockerfile and modify it per your needs
 * Build as normal
 
