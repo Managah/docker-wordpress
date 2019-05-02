@@ -3,12 +3,12 @@ PHP config template in [confd](https://github.com/kelseyhightower/confd) format.
 
 This repository provides some files ready to copy and paste when creating a new PHP image that supports changing configuration using ENV vars.
 
-# Usage 1
+## Usage 1
 * Manually copy confd and nuphp-entrypoint.sh into your Docker image repository
 * Copy content of example.Dockerfile into your Dockerfile and modify it per your needs
 * Build as normal
 
-# Usage 2 (recommended)
+## Usage 2
 * Add this repo as a remote `git remote add phptmpl https://github.com/ndthuan/docker-php-confd-template.git`
 * Fetch `git fetch phptmpl`
 * Merge `git merge phptmpl/master --allow-unrelated-histories` (on conflict, accept your README.md)
@@ -16,6 +16,9 @@ This repository provides some files ready to copy and paste when creating a new 
 * Build as normal
 
 This way has more steps but you can easily get new changes from this repo by fetching and merging.
+
+## Usage 3
+Import this as a git submodule. Be creative.
 
 # Supported ENV vars
 * NUPHP_UPLOAD_MAX_FILESIZE (default: 2M)
@@ -28,12 +31,14 @@ This way has more steps but you can easily get new changes from this repo by fet
 * NUPHP_SESSION_SAVE_HANDLER (default: files)
 * NUPHP_SESSION_SAVE_PATH (default: empty)
 
-# Build a test image
+# Testing
+
+## Build a test image
 ```bash
 docker build --no-cache -t wp:test -f example.Dockerfile .
 ```
 
-# Test the built image
+## Test the built image
 ```bash
 docker run --rm wp:test php -i | grep upload_max
 ```
