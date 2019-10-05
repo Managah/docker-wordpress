@@ -1,3 +1,0 @@
-[template]
-src = "ssmtp.conf.tmpl"
-dest = "/etc/ssmtp/ssmtp.conf"

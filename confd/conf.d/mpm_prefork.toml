@@ -1,3 +1,0 @@
-[template]
-src = "mpm_prefork.conf.tmpl"
-dest = "/etc/apache2/mods-available/mpm_prefork.conf"

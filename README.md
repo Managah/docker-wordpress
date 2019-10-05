@@ -18,12 +18,12 @@ This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP
 
 # Supported environment variables
 
-* **WordPress** (see [all available vars](https://hub.docker.com/_/wordpress))
+* **WordPress**
   * `WORDPRESS_DB_HOST`
   * `WORDPRESS_DB_USER`
   * `WORDPRESS_DB_PASSWORD`
   * `WORDPRESS_DB_NAME`
-* **PHP** (see [all available vars](https://github.com/ndthuan/docker-wordpress/blob/master/confd/templates/zzz-nuphp.ini.tmpl))
+* **PHP**
   * `NUPHP_UPLOAD_MAX_FILESIZE` (default: 2M)
   * `NUPHP_POST_MAX_FILESIZE` (default: 8M)
   * `NUPHP_MEMORY_LIMIT` (default: 128M)
@@ -33,15 +33,18 @@ This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP
   * `NUPHP_SESSION_NAME` (default: PHPSESSID)
   * `NUPHP_SESSION_SAVE_HANDLER` (default: files)
   * `NUPHP_SESSION_SAVE_PATH` (default: empty)
-* **SSMTP** (see [all available vars](https://github.com/ndthuan/docker-wordpress/blob/master/confd/templates/ssmtp.conf.tmpl))
-  * `SSMTP_MAILHUB` (e.g. smtp.gmail.com:587)
-  * `SSMTP_AUTH_USER` (e.g. youruser@gmail.com)
-  * `SSMTP_AUTH_PASS` (e.g. your gmail password or app password if you've enabled 2FA authentication)
-* **Apache Prefork** (see [all available vars](https://github.com/ndthuan/docker-wordpress/blob/master/confd/templates/mpm_prefork.conf.tmpl))
+* **MSMTP**
+  * `MSMTP_HOST` (default: smtp.gmail.com)
+  * `MSMTP_PORT` (default: 587)
+  * `MSMTP_USER` (e.g. youruser@gmail.com)
+  * `MSMTP_PASSWORD` (e.g. your gmail password or app password if you've enabled 2FA authentication)
+* **Apache Prefork**
   * `PREFORK_START_SERVERS` (default: 1)
   * `PREFORK_MIN_SPARE_SERVERS` (default: 1)
   * `PREFORK_MAX_SPARE_SERVERS` (default: 3)
   * `PREFORK_MAX_REQUEST_WORKERS` (default: 150)
+
+See all available variables at https://github.com/ndthuan/docker-wordpress/blob/master/nuphp-entrypoint.sh
 
 # Contribution
 
