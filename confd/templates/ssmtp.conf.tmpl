@@ -10,7 +10,7 @@ root={{ getenv "SSMTP_ROOT_EMAIL" "root" }}
 mailhub={{ getenv "SSMTP_MAILHUB" "localhost:25" }}
 
 # Where will the mail seem to come from?
-rewriteDomain={{ getenv "SSMTP_REWRITE_DOMAIN" }}
+rewriteDomain={{ getenv "SSMTP_REWRITE_DOMAIN" "" }}
 
 # The full hostname
 hostname={{ getenv "SSMTP_HOSTNAME" "localhost.localdomain" }}
@@ -23,7 +23,7 @@ FromLineOverride={{ getenv "SSMTP_FROM_LINE_OVERRIDE" "YES" }}
 # Username and password for Google's Gmail servers
 # From addresses are settled by Mutt's rc file, so
 # with this setup one can still achieve multi-user SMTP
-AuthUser={{ getenv "SSMTP_AUTH_USER" }}
+AuthUser={{ getenv "SSMTP_AUTH_USER" "" }}
 AuthPass={{ getenv "SSMTP_AUTH_PASS" "" }}
 AuthMethod={{ getenv "SSMTP_AUTH_METHOD" "LOGIN" }}
 

@@ -1,7 +1,7 @@
 FROM wordpress:php7.3-apache
 
 RUN apt-get update && \
-  apt-get install -y ssmtp && \
+  apt-get install -y ssmtp/oldstable && \
   apt-get clean && \
   echo 'sendmail_path = "/usr/sbin/ssmtp -t"' > /usr/local/etc/php/conf.d/zzz-mail.ini
 

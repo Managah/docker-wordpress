@@ -37,6 +37,11 @@ This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP
   * `SSMTP_MAILHUB` (e.g. smtp.gmail.com:587)
   * `SSMTP_AUTH_USER` (e.g. youruser@gmail.com)
   * `SSMTP_AUTH_PASS` (e.g. your gmail password or app password if you've enabled 2FA authentication)
+* **Apache Prefork** (see [all available vars](https://github.com/ndthuan/docker-wordpress/blob/master/confd/templates/mpm_prefork.conf.tmpl))
+  * `PREFORK_START_SERVERS` (default: 1)
+  * `PREFORK_MIN_SPARE_SERVERS` (default: 1)
+  * `PREFORK_MAX_SPARE_SERVERS` (default: 3)
+  * `PREFORK_MAX_REQUEST_WORKERS` (default: 150)
 
 # Contribution
 
