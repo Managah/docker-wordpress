@@ -18,7 +18,10 @@ This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP
 
 # Supported environment variables
 
-* **WordPress**
+* **UID and GID**
+  * `NEW_WWW_DATA_UID`
+  * `NEW_WWW_DATA_GID`
+* **WordPress** (see [all available vars](https://hub.docker.com/_/wordpress))
   * `WORDPRESS_DB_HOST`
   * `WORDPRESS_DB_USER`
   * `WORDPRESS_DB_PASSWORD`
