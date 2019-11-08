@@ -42,9 +42,9 @@ This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP
   * `MSMTP_USER` (e.g. youruser@gmail.com)
   * `MSMTP_PASSWORD` (e.g. your gmail password or app password if you've enabled 2FA authentication)
 * **Apache Prefork**
-  * `PREFORK_START_SERVERS` (default: 1)
-  * `PREFORK_MIN_SPARE_SERVERS` (default: 1)
-  * `PREFORK_MAX_SPARE_SERVERS` (default: 3)
+  * `PREFORK_START_SERVERS` (default: 3)
+  * `PREFORK_MIN_SPARE_SERVERS` (default: 3)
+  * `PREFORK_MAX_SPARE_SERVERS` (default: 10)
   * `PREFORK_MAX_REQUEST_WORKERS` (default: 150)
 
 See all available variables at https://github.com/ndthuan/docker-wordpress/blob/master/nuphp-entrypoint.sh
