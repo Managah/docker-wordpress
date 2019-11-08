@@ -11,6 +11,9 @@ cat > /etc/apache2/mods-available/mpm_prefork.conf <<EOF
 EOF
 
 cat > /usr/local/etc/php/conf.d/zzz-nuphp.ini <<EOF
+extension=igbinary.so
+extension=memcached.so
+
 upload_max_filesize=${NUPHP_UPLOAD_MAX_FILESIZE:-2M}
 post_max_size=${NUPHP_POST_MAX_FILESIZE:-8M}
 memory_limit=${NUPHP_MEMORY_LIMIT:-128M}
