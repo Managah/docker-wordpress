@@ -1,9 +1,10 @@
 ARG BASE_TAG=php7.4-apache
+
 FROM wordpress:${BASE_TAG}
 
 RUN apt-get update && \
   apt-get install -y msmtp libmemcached-dev zlib1g-dev && \
-  pecl install igbinary memcached && \
+  pecl install memcached && \
   apt-get clean
 
 ADD apache2-entrypoint.sh /usr/local/bin/

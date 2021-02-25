@@ -2,13 +2,12 @@
 
 set -ex
 
-TAGS='php7.3-apache php7.4-apache'
+TAGS='php7.3-apache php7.4-apache php8.0-apache'
 
 for tag in $TAGS; do
     image="managah/wordpress:${tag}"
     docker pull wordpress:${tag}
     docker build -t ${image} --build-arg BASE_TAG=${tag} -f apache2.Dockerfile .
-    docker run --rm ${image} php -m | grep -i -q igbinary || (echo "igbinary not loaded" && exit 1)
     docker run --rm ${image} php -m | grep -i -q memcached || (echo "memcached not loaded" && exit 1)
     docker run --rm ${image} php -m | grep -i -q opcache || (echo "opcache not loaded" && exit 1)
     docker run --name ${tag} --rm -d -p8888:80 ${image}

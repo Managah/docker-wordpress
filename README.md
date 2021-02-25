@@ -7,6 +7,7 @@ WordPress Docker image with easy-to-customize PHP and sSMTP configs.
 Supported tags:
 - php7.3-apache
 - php7.4-apache
+- php8.0-apache
 
 `latest` won't work so you always have to specify a tag.
 
