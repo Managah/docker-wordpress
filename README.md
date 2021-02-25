@@ -1,6 +1,6 @@
-# ndthuan/wordpress
+# managah/wordpress
 
-`docker pull ndthuan/wordpress`
+`docker pull managah/wordpress`
 
 WordPress Docker image with easy-to-customize PHP and sSMTP configs.
 
@@ -47,8 +47,8 @@ This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP
   * `PREFORK_MAX_SPARE_SERVERS` (default: 10)
   * `PREFORK_MAX_REQUEST_WORKERS` (default: 150)
 
-See all available variables at https://github.com/ndthuan/docker-wordpress/blob/master/nuphp-entrypoint.sh
+See all available variables at https://github.com/managah/docker-wordpress/blob/master/nuphp-entrypoint.sh
 
 # Contribution
 
-You are more than welcome to fork and contribute to https://github.com/ndthuan/docker-wordpress by creating PRs and reporting issues.
+You are more than welcome to fork and contribute to https://github.com/managah/docker-wordpress by creating PRs and reporting issues.

@@ -1,4 +1,4 @@
-FROM wordpress:php7.3-apache
+FROM wordpress:php7.4-apache
 
 RUN apt-get update && \
   apt-get install -y msmtp libmemcached-dev zlib1g-dev && \
