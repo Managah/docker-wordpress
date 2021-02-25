@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -ex
+
 cat > /usr/local/etc/php/conf.d/zzz-nuphp.ini <<EOF
 extension=igbinary.so
 extension=memcached.so

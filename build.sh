@@ -17,6 +17,8 @@ for tag in $TAGS; do
     docker rm -fv ${tag}
 done
 
-for tag in $TAGS; do
-    docker push managah/wordpress:${tag}
-done
+if [ "push" == "$1" ]; then
+    for tag in $TAGS; do
+        docker push managah/wordpress:${tag}
+    done
+fi

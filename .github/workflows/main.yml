@@ -36,4 +36,4 @@ jobs:
           logout: true
 
       - name: Build, test, push
-        run: sh ./build.sh
+        run: sh ./build.sh push

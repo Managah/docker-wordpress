@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -ex
+
 cat > /etc/apache2/mods-available/mpm_prefork.conf <<EOF
 <IfModule mpm_prefork_module>
     StartServers              ${PREFORK_START_SERVERS:-3}
