@@ -1,8 +1,14 @@
 # managah/wordpress
 
-`docker pull managah/wordpress`
-
 WordPress Docker image with easy-to-customize PHP and sSMTP configs.
+
+`docker pull managah/wordpress:[tag]`
+
+Supported tags:
+- php7.3-apache
+- php7.4-apache
+
+`latest` won't work so you always have to specify a tag.
 
 # Problems this image attempts to solve
 
@@ -11,10 +17,6 @@ You want to deploy a number of WP containers with slightly different PHP configs
 With this image, you can:
 * change basic but important PHP configs like post limit, upload limit, session storage...
 * configure sSMTP to send emails from a Docker container. When combined with something like Gmail SMTP, it ensures maximum email deliverability.
-
-# The base image
-
-This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP version is 5.2 but it can be upgraded to the latest version using WP's update tool without an issue.
 
 # Supported environment variables
 
@@ -41,14 +43,12 @@ This image is based on the standard image `wordpress:php7.3-apache`. Packaged WP
   * `MSMTP_PORT` (default: 587)
   * `MSMTP_USER` (e.g. youruser@gmail.com)
   * `MSMTP_PASSWORD` (e.g. your gmail password or app password if you've enabled 2FA authentication)
+
+see [common-config.sh](./common-config.sh) for more available variables.
+
 * **Apache Prefork**
   * `PREFORK_START_SERVERS` (default: 3)
   * `PREFORK_MIN_SPARE_SERVERS` (default: 3)
   * `PREFORK_MAX_SPARE_SERVERS` (default: 10)
   * `PREFORK_MAX_REQUEST_WORKERS` (default: 150)
-
-See all available variables at https://github.com/managah/docker-wordpress/blob/master/nuphp-entrypoint.sh
-
-# Contribution
-
-You are more than welcome to fork and contribute to https://github.com/managah/docker-wordpress by creating PRs and reporting issues.
+  * `PREFORK_MAX_CONNECTIONS_PER_CHILD` (default: 0)
