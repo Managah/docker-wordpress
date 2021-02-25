@@ -3,7 +3,6 @@ FROM wordpress:${BASE_TAG}
 
 RUN apt-get update && \
   apt-get install -y msmtp libmemcached-dev zlib1g-dev && \
-  docker-php-ext-install opcache && \
   pecl install igbinary memcached && \
   apt-get clean
 
