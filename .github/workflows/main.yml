@@ -1,4 +1,4 @@
-name: Docker build
+name: Docker Build
 
 # Controls when the action will run.
 on:
@@ -33,5 +33,5 @@ jobs:
           # Log out from the Docker registry at the end of a job
           logout: true
 
-      - name: Build and push
+      - name: Build, test, push
         run: sh ./build.sh
