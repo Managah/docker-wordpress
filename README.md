@@ -1,5 +1,7 @@
 # managah/wordpress
 
+![Docker Build](https://github.com/managah/docker-wordpress/actions/workflows/main.yml/badge.svg)
+
 WordPress Docker image with easy-to-customize PHP and sSMTP configs.
 
 `docker pull managah/wordpress:[tag]`
