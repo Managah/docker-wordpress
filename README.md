@@ -10,6 +10,7 @@ Supported tags:
 - php7.3-apache
 - php7.4-apache
 - php8.0-apache
+- php8.1-apache
 
 `latest` won't work so you always have to specify a tag.
 
