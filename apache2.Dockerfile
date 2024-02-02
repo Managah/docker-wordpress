@@ -5,7 +5,7 @@ FROM wordpress:${BASE_TAG}
 COPY anticache /
 
 RUN apt-get update && \
-  apt-get install -y msmtp libmemcached-dev zlib1g-dev && \
+  apt-get install -y msmtp libmemcached-dev zlib1g-dev libssl-dev && \
   pecl install memcached && \
   apt-get clean
 
